@@ -1,0 +1,105 @@
+:root {
+  --main-bg-color: #e6ebe9;
+  --main-text-color: #3454e0;
+  --second-text-color: #69a3f0;
+  --second-bg-color: hsl(156, 14%, 93%);
+}
+
+.primary-text {
+  color: var(--main-text-color);
+}
+
+.second-text {
+  color: var(--second-bg-color);
+}
+
+.logo{
+  height: 40px;
+}
+
+li a.active, li a:hover{
+  transition: .5s;
+}
+
+
+.secondary-bg {
+  background-color: var(--second-bg-color);
+}
+
+.rounded-full {
+  border-radius: 100%;
+}
+
+#wrapper {
+  overflow-x: hidden;
+  background-image: url("http://localhost/app/template/fondo_view.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+#menu-toggle {
+  cursor:pointer;
+}
+
+.list-group-item {
+  border: none;
+  padding: 20px 30px;
+}
+
+.bg-menu{
+  background-color: #2e2e2e;
+}
+
+.bg-second-text{
+  color:white;
+
+}
+
+.list-group-item.active {
+  color: var(--main-text-color);
+  font-weight: bold;
+  border: black;
+}
+
+@media (min-width: 1024px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
